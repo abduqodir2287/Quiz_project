@@ -1,0 +1,45 @@
+<!--{% load static %}-->
+<!--<html lang="en">-->
+<!--<link rel="stylesheet" href="{% static 'congrat.css' %}">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Congratulations</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div>-->
+<!--        <p class="total">Total</p>-->
+<!--        <ul>-->
+<!--            <li><p>Total questions: {{ total }}/{{ total }}</p></li>-->
+<!--            <li><p>Percentage: {{ percent }}%</p></li>-->
+<!--            <li><p>Incorrect answers: {{ wrong }}</p></li>-->
+<!--            <li><p>Correct answers: {{ correct }}</p></li>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--</body>-->
+<!--</html>-->
+
+{% load static %}
+<html lang="en">
+<link rel="stylesheet" href="{% static 'congrat.css' %}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations</title>
+</head>
+<body>
+    <div>
+        <p class="total">Total</p>
+        <ul>
+            <li><p>Jami savollar: {{ total }}</p></li>
+            <li><p>Foiz: {{ percent }}%</p></li>
+            <li><p>Noto'g'ri javoblar: {{ wrong }}</p></li>
+            <li><p>To'g'ri javoblar: {{ correct }}</p></li>
+        </ul>
+    </div>
+</body>
+</html>
+
+

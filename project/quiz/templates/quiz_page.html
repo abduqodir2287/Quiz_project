@@ -1,0 +1,113 @@
+{% load static %}
+<html lang="en">
+<link rel="stylesheet" href="{% static 'quiz_page.css' %}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz page</title>
+</head>
+
+<body>
+    <header>
+        <div class="profile">
+            <img src="https://media.istockphoto.com/id/1300845620/ru/%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F/%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C-icon-flat-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-%D1%81%D0%B8%D0%BC%D0%B2%D0%BE%D0%BB-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8F-%D0%B8%D0%BB%D0%BB%D1%8E%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%B0.jpg?s=612x612&w=0&k=20&c=Po5TTi0yw6lM7qz6yay5vUbUBy3kAEWrpQmDaUMWnek=" class="image" alt="profile">
+            <p>Abduqodir</p>
+        </div>
+        <div class="time">
+            <p class="header_number">Test boshlandi!!</p>
+        </div>
+        <div class="header_number">
+            <p>Omad!</p>
+        </div>
+        <div>
+            <a href="#"><img src="https://media.istockphoto.com/id/1338942955/vector/three-linear-chat-speech-message-bubbles-with-question-marks-forum-icon-communication.jpg?s=612x612&w=0&k=20&c=7lJeE-k1GLf6zCYrKB6rtZuwC9HVS_PjXNNgUym81NE=" class="image" alt=""></a>
+        </div>
+    </header>
+
+    <form method="post" action="{% url 'quiz_page' %}">
+        {% csrf_token %}
+        {% for q in questions %}
+        <div class="question-container">
+            <div class="lorem">
+                <p>{{ q.savol }}</p>
+
+            <div class="variants">
+                <input class="form-check-input" type="radio" name="question_{{ q.id }}" id="gridRadios1" value="{{ q.jav1 }}">
+                <label class="form-check-label" for="gridRadios1">{{ q.jav1 }}</label>
+            </div>
+            <div class="variants">
+                <input class="form-check-input" type="radio" name="question_{{ q.id }}" id="gridRadios2" value="{{ q.jav2 }}">
+                <label class="form-check-label" for="gridRadios2">{{ q.jav2 }}</label>
+            </div>
+            <div class="variants">
+                <input class="form-check-input" type="radio" name="question_{{ q.id }}" id="gridRadios3" value="{{ q.jav3 }}">
+                <label class="form-check-label" for="gridRadios3">{{ q.jav3 }}</label>
+            </div>
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>
+
+
+<!--{% load static %}-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <link rel="stylesheet" href="{% static 'quiz_page.css' %}">-->
+<!--    <title>Quiz page</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <header>-->
+<!--        <div class="profile">-->
+<!--            <img src="https://media.istockphoto.com/id/1300845620/ru/%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F/%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C-icon-flat-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC-%D1%84%D0%BE%D0%BD%D0%B5-%D1%81%D0%B8%D0%BC%D0%B2%D0%BE%D0%BB-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8F-%D0%B8%D0%BB%D0%BB%D1%8E%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%B0.jpg?s=612x612&w=0&k=20&c=Po5TTi0yw6lM7qz6yay5vUbUBy3kAEWrpQmDaUMWnek=" class="image" alt="profile">-->
+<!--            <p> Abduqodir </p>-->
+<!--        </div>-->
+<!--        <div class="time">-->
+<!--            <p class="header_number">Test boshlandi!!</p>-->
+<!--        </div>-->
+<!--        <div class="header_number">-->
+<!--            <p>6/25</p>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <a href="#"><img src="./img/applicationexit_104351.png" class="image" alt=""></a>-->
+<!--        </div>-->
+<!--    </header>-->
+
+<!--    <form method="post" action="{% url 'quiz_page' %}">-->
+<!--        {% csrf_token %}-->
+<!--        {% for q in questions %}-->
+<!--        <div class="question-container">-->
+<!--            <div class="lorem">-->
+<!--                <p>{{ q.savol }}</p>-->
+
+<!--            <div class="variants">-->
+<!--                <input class="form-check-input" type="radio" name="question_{{ q.id }}" id="gridRadios1" value="{{ q.jav1 }}">-->
+<!--                <label class="form-check-label" for="gridRadios1">{{ q.jav1 }}</label>-->
+<!--            </div>-->
+<!--            <div class="variants">-->
+<!--                <input class="form-check-input" type="radio" name="question_{{ q.id }}" id="gridRadios2" value="{{ q.jav2 }}">-->
+<!--                <label class="form-check-label" for="gridRadios2">{{ q.jav2 }}</label>-->
+<!--            </div>-->
+<!--            <div class="variants">-->
+<!--                <input class="form-check-input" type="radio" name="question_{{ q.id }}" id="gridRadios3" value="{{ q.jav3 }}">-->
+<!--                <label class="form-check-label" for="gridRadios3">{{ q.jav3 }}</label>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        {% endfor %}-->
+<!--        <button type="submit" class="btn btn-primary">Submit</button>-->
+<!--    </form>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+

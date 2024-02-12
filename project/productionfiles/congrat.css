@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: lightgray;
+}
+
+div {
+    text-align: center;
+}
+
+div .total {
+    font-size: 40px;
+    color: gray;
+    margin-bottom: 50px;
+}
+
+div ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    padding: 0px 35px;
+    height: 70px;
+    border-radius: 50px;
+    column-gap: 100px;
+    cursor: pointer;
+}
+
+div ul p {
+    font-size: 35px;
+    color: white;
+}
