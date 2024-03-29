@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(174, 169, 169);
+    padding: 5px 30px;
+}
+
+header .profile {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+header .image {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+header .profile p {
+    font-size: 25px;
+    color: white;
+}
+
+header .header_number {
+    color: white;
+    font-size: 30px;
+}
+
+
+section {}
+
+ .numbers {
+    margin-top: 30px;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(174, 169, 169);
+    color: white;
+    column-gap: 50px;
+    font-size: 20px;
+    width: 80%;
+    border-radius: 50px;
+    padding: 5px 30px;
+}
+
+ .lorem {
+    padding: 0 15%;
+    text-align: center;
+    color: gray;
+    margin: 30px 0;
+    font-size: 23px;
+}
+
+.variants {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    height: 35px;
+    border-radius: 25px;
+    background-color: gray;
+    color: white;
+    padding-left: 20px;
+    margin: 0 25%;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+    cursor: pointer;
+    transition: 1s;
+}
+.variants:hover {
+    background-color: white;
+    color: black;
+    transition: 1s;
+}
+button {
+    display: block;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+

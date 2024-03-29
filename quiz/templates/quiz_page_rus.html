@@ -1,0 +1,64 @@
+{% load static %}
+<html lang="en">
+<link rel="stylesheet" href="{% static 'quiz_page.css' %}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz page</title>
+</head>
+
+<body>
+    <header>
+        <div class="profile">
+            <img src="https://i.pinimg.com/originals/a0/4d/84/a04d849cf591c2f980548b982f461401.jpg" class="image" alt="profile">
+            <p>Абдукодир</p>
+        </div>
+        <div class="time">
+            <p class="header_number">Тест начался!!</p>
+        </div>
+        <div class="header_number">
+            <p>Удачи!</p>
+        </div>
+        <div>
+            <a href="{% url 'tilni_tanlash' %}"><img src="https://cdn-icons-png.flaticon.com/512/4400/4400629.png" class="image" alt=""></a>
+        </div>
+    </header>
+
+    <form method="post" action="{% url 'quiz_page_rus' %}">
+        {% csrf_token %}
+        {% for q in questions %}
+        <div class="question-container">
+            <div class="lorem">
+                <p>{{ q.savol }}</p>
+
+            <div class="variants">
+                <input class="form-check-input" type="radio" name="question_{{ q.id }}" id="gridRadios1" value="{{ q.jav1 }}">
+                <label class="form-check-label" for="gridRadios1">{{ q.jav1 }}</label>
+            </div>
+            <div class="variants">
+                <input class="form-check-input" type="radio" name="question_{{ q.id }}" id="gridRadios2" value="{{ q.jav2 }}">
+                <label class="form-check-label" for="gridRadios2">{{ q.jav2 }}</label>
+            </div>
+            <div class="variants">
+                <input class="form-check-input" type="radio" name="question_{{ q.id }}" id="gridRadios3" value="{{ q.jav3 }}">
+                <label class="form-check-label" for="gridRadios3">{{ q.jav3 }}</label>
+            </div>
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary">«Отправить»</button>
+    </form>
+    <header>
+        <div class="time">
+            <p class="header_number">После завершения теста</p>
+        </div>
+        <div class="profile">
+            <p>Нажмите кнопку «Отправить»</p>
+        </div>
+        <div class="header_number">
+            <p>Удачи!!</p>
+        </div>
+    </header>
+</body>
+</html>

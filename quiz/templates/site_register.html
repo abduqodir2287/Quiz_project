@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sign up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .card {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            background: #ddd; /* Change background color to grey */
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .card:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .submit_form {
+            text-align: center;
+            background: #777; /* Change background color to grey */
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .submit_btn {
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #333; /* Change heading color to dark grey */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555; /* Change label color to a lighter grey */
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+
+        input[type="submit"] {
+            background-color: #555; /* Change button color to a darker grey */
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #444; /* Change button color on hover to a slightly darker grey */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="card">
+                    <form method="POST" class="submit_form">
+                        {% csrf_token %}
+
+                        <h2>Signup</h2>
+
+                        <label for="firstname">First Name:</label>
+                        <input type="text" name="firstname" required>
+
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" name="lastname" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" required>
+
+                        <div class="submit_btn">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

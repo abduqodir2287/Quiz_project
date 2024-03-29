@@ -1,0 +1,33 @@
+{% load static %}
+<html lang="en">
+<link rel="stylesheet" href="{% static 'congrat.css' %}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations</title>
+</head>
+<body>
+    <header>
+        <div class="time">
+            <p class="header_number">Test yakunlandi!</p>
+        </div>
+        <div class="header_number">
+            <p>Test natijalarini ko'rishingiz mumkin!!</p>
+        </div>
+    </header>
+    <div>
+        <p class="total">Total</p>
+        <ul>
+            <li><p>Jami savollar: {{ total }}</p></li>
+            <li><p>Foiz: {{ percent }}%</p></li>
+            <li><p>Noto'g'ri javoblar: {{ wrong }}</p></li>
+            <li><p>To'g'ri javoblar: {{ correct }}</p></li>
+        </ul>
+    </div>
+    <a href="{% url 'tilni_tanlash' %}" class="link">Yana bir bor urinib ko'ring</a>
+
+</body>
+</html>
+
+
