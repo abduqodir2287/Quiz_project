@@ -10,7 +10,7 @@ def site_register(request):
         form = Users_Forms(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("login")
+            return redirect("tilni_tanlash")
     else:
         form = Users_Forms()
 
@@ -117,6 +117,14 @@ def quiz_page_rus(request):
 def tilni_tanlash(request):
     try:
         temp = loader.get_template("tilni_tanlash.html")
+        return HttpResponse(temp.render())
+    except:
+        temp = loader.get_template("welcome.html")
+        return HttpResponse(temp.render())
+
+def first_page(request):
+    try:
+        temp = loader.get_template("first_page.html")
         return HttpResponse(temp.render())
     except:
         temp = loader.get_template("welcome.html")

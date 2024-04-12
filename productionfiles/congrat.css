@@ -1,3 +1,4 @@
+/* Общие стили */
 * {
     margin: 0;
     padding: 0;
@@ -11,17 +12,13 @@ body {
     height: 100vh;
     background-color: lightgray;
 }
+
+/* Стили для заголовка */
 header {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-}
-
-header .profile {
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
 }
 
 header .time {
@@ -34,8 +31,7 @@ header .header_number {
     font-size: 30px;
 }
 
-section {}
-
+/* Стили для контента */
 div {
     text-align: center;
 }
@@ -63,11 +59,7 @@ div ul p {
     color: white;
 }
 
-link {
-    display: block;
-    margin: 0 auto;
-}
-
+/* Стили для ссылок */
 .link {
     display: block;
     margin: 20px auto 0;
@@ -89,3 +81,22 @@ link {
     background-color: #007bff;
 }
 
+/* Медиа-запросы для мобильных устройств */
+@media only screen and (max-width: 600px) {
+    header {
+        position: relative; /* Позиционируем заголовок относительно родительского элемента */
+        text-align: center; /* Выравниваем текст по центру */
+    }
+
+    header .time {
+        font-size: 30px; /* Уменьшаем размер шрифта времени */
+    }
+
+    header .header_number {
+        font-size: 20px; /* Уменьшаем размер шрифта номера */
+    }
+
+    div .total {
+        font-size: 30px; /* Уменьшаем размер шрифта для общего числа */
+    }
+}

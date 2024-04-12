@@ -1,3 +1,4 @@
+/* Общие стили */
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +9,7 @@ body {
 
 }
 
+/* Стили для заголовка */
 header {
     display: flex;
     align-items: center;
@@ -41,7 +43,7 @@ header .header_number {
 
 section {}
 
- .numbers {
+.numbers {
     margin-top: 30px;
     margin-left: 5%;
     display: flex;
@@ -55,7 +57,7 @@ section {}
     padding: 5px 30px;
 }
 
- .lorem {
+.lorem {
     padding: 0 15%;
     text-align: center;
     color: gray;
@@ -80,11 +82,13 @@ section {}
     cursor: pointer;
     transition: 1s;
 }
+
 .variants:hover {
     background-color: white;
     color: black;
     transition: 1s;
 }
+
 button {
     display: block;
     margin: 0 auto;
@@ -105,3 +109,55 @@ button {
     transition: background-color 0.3s;
 }
 
+/* Медиа-запросы для мобильных устройств */
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    header .profile {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    header .image {
+        width: 40px;
+        height: 40px;
+    }
+
+    header .profile p {
+        font-size: 20px;
+    }
+
+    header .header_number {
+        font-size: 25px;
+    }
+
+    .numbers {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 90%;
+        margin: 20px auto;
+        padding: 10px 20px;
+    }
+
+    .lorem {
+        padding: 0 10%;
+        font-size: 18px;
+        margin: 20px 0;
+    }
+
+    .variants {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
