@@ -39,7 +39,7 @@ _________________________________________________________________
 # herokudan app yaratiladi va shu nomni beriladi
 # heroku git:remote -a app_name
 # git push heroku master
-# Bot herokuga yuklandi !!
+# Sayt herokuga yuklandi !!
 _____________________________________________________
 
 # heroku run python manage.py migrate
