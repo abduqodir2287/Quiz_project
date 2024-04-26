@@ -1,4 +1,5 @@
-/* Общие стили */
+@media(max-width:450px) {
+    /* Общие стили */
 * {
     margin: 0;
     padding: 0;
@@ -22,13 +23,13 @@ header {
 }
 
 header .time {
-    font-size: 50px;
+    font-size: 25px;
     color: red;
 }
 
 header .header_number {
     color: green;
-    font-size: 30px;
+    font-size: 15px;
 }
 
 /* Стили для контента */
@@ -48,16 +49,17 @@ div ul {
     align-items: center;
     justify-content: center;
     background-color: gray;
-    padding: 0px 35px;
-    height: 70px;
+    padding: 0px 15px;
+    width: 90%;
+    height: 40px;
     border-radius: 50px;
-    column-gap: 100px;
+    column-gap: 50px;
     /* cursor: pointer; */
     text-decoration: none;
 }
 
 div ul p {
-    font-size: 35px;
+    font-size: 10px;
     color: white;
     cursor: pointer;
 
@@ -120,8 +122,8 @@ footer .account .links a{
 }
 
 footer .account img {
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     transition: 1s;
 }
 /* footer .account img:hover{
@@ -132,6 +134,7 @@ footer .account img {
 
 footer .account h2 {
     cursor: pointer;
+    font-size: 15px;
 }
 
 footer .account a{
@@ -143,3 +146,5 @@ footer .account a{
     font-size: 17px;
     transition: 1s;
 } */
+
+}

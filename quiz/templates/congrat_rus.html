@@ -1,12 +1,17 @@
-{% load static %}
+ {% load static %}
 <html lang="en">
 <link rel="stylesheet" href="{% static 'congrat.css' %}">
+<link rel="stylesheet" href="{% static 'congrat_media.css' %}">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="congrat.css">
+    <link rel="stylesheet" href="congrat_media.css">
     <title>Congratulations</title>
 </head>
+
 <body>
     <header>
         <div class="time">
@@ -16,18 +21,52 @@
             <p>Вы можете увидеть результаты тестирования!!</p>
         </div>
     </header>
-    <div>
-        <p class="total">Total</p>
-        <ul>
-            <li><p>Всего вопросов: {{ total }}</p></li>
-            <li><p>Процент: {{ percent }}%</p></li>
-            <li><p>Неправильные ответы: {{ wrong }}</p></li>
-            <li><p>Правильные ответы: {{ correct }}</p></li>
-        </ul>
-    </div>
-    <a href="{% url 'tilni_tanlash' %}" class="link">Попробуйте еще раз</a>
+    <section>
+        <div>
+            <p class="total">Результаты:</p>
+            <ul>
+                <li>
+                    <p>Всего вопросов: {{ total }}</p>
+                </li>
+                <li>
+                    <p>Процент: {{ percent }}%</p>
+                </li>
+                <li>
+                    <p>Неправильные ответы: {{ wrong }}</p>
+                </li>
+                <li>
+                    <p>Правильные ответы: {{ correct }}</p>
+                </li>
+            </ul>
+        </div>
 
+        <div class="restart">
+            <a href="{% url 'tilni_tanlash' %}" class="link">Попробуйте еще раз</a>
+        </div>
+
+        <footer>
+
+            <div class="account">
+                <div class="links">
+                    <a href="https://www.instagram.com/abduqodirov634"><img
+                            src="{% static 'img/new-Instagram-logo-png-full-colour-glyph.png' %}" alt="Instagram"></a>
+                    <a href="https://github.com/abduqodir2287"><img src="{% static 'img/25231.png' %}" alt="GitHub"></a>
+                </div>
+                <h2>Backend Developer <br> Abduqodir</h2>
+            </div>
+            <div class="account">
+                <div class="links">
+                    <a href="https://www.instagram.com/komil._.077/"><img
+                            src="{% static 'img/new-Instagram-logo-png-full-colour-glyph.png' %}" alt="Instagram"></a>
+                    <a href="https://github.com/Komil077"><img src="{% static 'img/25231.png' %}" alt="GitHub"></a>
+                </div>
+                <h2>Frontend Developer <br> Komiljon</h2>
+            </div>
+
+        </footer>
+    </section>
 </body>
+
 </html>
 
 
